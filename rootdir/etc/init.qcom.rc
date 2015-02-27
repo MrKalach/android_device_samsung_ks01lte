@@ -726,8 +726,8 @@ on post-fs-data
     chown system system /sys/class/input/input3/enabled
 
     # permissions for gpio-keys
-    chmod 0660 /sys/class/input/input17/enabled
-    chown system system /sys/class/input/input17/enabled
+    chmod 0660 /sys/class/input/input18/enabled
+    chown system system /sys/class/input/input18/enabled
 
     # Color Calibration
     chown root system /sys/class/misc/gammacontrol/tuner
@@ -856,6 +856,7 @@ on property:init.svc.bootanim=stopped
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1500000:90 1800000:70"
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 40000
     write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 100000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
 
     write /sys/module/cpu_boost/parameters/boost_ms 10
     write /sys/module/cpu_boost/parameters/sync_threshold 1728000
